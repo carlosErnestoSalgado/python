@@ -1,0 +1,43 @@
+///////////////////////////////////////////////////////////////////////////////////////
+Clase # 16
+Manejo de excepciones
+try, except, raise y finally
+1-) try, except, raise
+Example:
+    def palindrome(string):
+        try:
+            if len(string) == 0:
+                raise ValueError('No puedes entrar una cadena vacia')
+        return string == string[::-1]
+        except ValueError as error:
+            print(error)
+            return False
+    
+    try:
+        print(palindrome(1))
+    except ValueError:
+        print('Debes ingresar un string')
+
+*** raise lo que hace es crear un error si se cumple la condicion,
+    despues con
+    except <nombre del error>  as <nombre q le pongamos>:
+        print(<nombre que le pongamos>)
+    Mostramos el error creado en raise
+2-) try, finally
+    Esto mayormente se usa en manejos de archivos, con base de datos y servidores, y lo que hace
+    finally es ejecutar su bloque de codigo, sin importar lo que suceda en el  bloque de codigo
+    de try, aunque suceda un error, un ejemplo clasico de esto es
+    try:
+        archivo = open('file.txt')
+        # Ejecutamos todo el codigo al archivo
+    finally:
+        archivo.close() #Aqui cerramos el archivo pase lo que pase en el try                 
+
+///////////////////////////////////////////////////////////////////////////////////////
+Clase # 18
+Assert Statement
+Es otra manera de manejar errores con Python
+La sintaxis viene siendo:
+    assert <condicion>, <Mensaje de error>
+La logica es que si se cumple la condicion, retorna True, pues continua con el codigo,
+pero si no se cumple devuelve False y envia el mensaje de error entrado.
