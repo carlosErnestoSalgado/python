@@ -41,3 +41,22 @@ La sintaxis viene siendo:
     assert <condicion>, <Mensaje de error>
 La logica es que si se cumple la condicion, retorna True, pues continua con el codigo,
 pero si no se cumple devuelve False y envia el mensaje de error entrado.
+
+/////////////////////////////////////////////////////////////////////////////////////
+Calse # 19
+Manejo de archivo en Python
+Modos de apertura
+R - Lectura
+W - Escritura (Sobrescritura)
+A - Escritura (Agregar al final)
+
+with open('./ruta/del/archivo.txt', 'r') as f:
+
+Keywords
+with: manejador contextual, maneja el flujo de nuestro archivo, que garantiza
+que si cerramos inesperadamente el archivo o se cierra el script, el archivo no se dane.
+
+open: funcion interna de python, para abrir un archivo, con varios parametros,
+pero los obligatorios son 2, 1ro la ruta del archivo, 2do el modo de apertura.
+
+as: es para darle un nombre ipotetico a nuestro archivo, para intereactuar con el en el programa.
